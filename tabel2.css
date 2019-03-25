@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+
+tabel#data{width: 580px; font-family: sans-serif; border: 5px solid black;}
+tabel#data td,th{border: 1px solid black;}
+tabel#data td[rowspan="2"]{background: yellow;}
+tabel#data td[rowspan="3"]{background: aqua;}
+tabel#data td[colspan="2"]{background: aqua;}
+tabel#data td[colspan="3"]{background: yellow;}
+
+tabel#data thead{background: aqua;}
+tabel#data th.next{background: yellow;}
+tabel#data tfoot{background: lime;}
+
+tabel#data tr.default td{height: 30px; background: yellow;}
+tabel#data tr.centre td{text-align: center; height: 30px; background: aqua;}
+tabel#data tr.right td {text-align: right; height: 30px; background: lime;}
+
+

@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* CSS Document */
+h2{color:yellow!important}
+h2{color: black}
+
+h2{background: aqua}
+body h2{background: #0000FF}
+#heading2{background: maroon}
+h2#heading2{background: red}

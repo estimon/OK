@@ -1,0 +1,8 @@
+p#para1 {font-weight: 400}
+p#para2{font-weight: 700}
+
+span.bold{font-weight: bold}
+span.more{font-weight: bolder}
+span.norm{font-weight: normal}
+span.less{font-weight: lighter}
+

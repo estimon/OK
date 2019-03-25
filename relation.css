@@ -1,0 +1,7 @@
+@charset "utf-8";
+
+h3 + p{background: yellow}
+p > span{background: lime}
+body > ul{background: fuchsia}
+body > ul > li {background: aqua}
+body > ul > li > span {background: orange}

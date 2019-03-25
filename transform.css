@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* CSS Document */
+
+div{float: left; margin: 10px ; height: 120px; width: 120px; border: 5px solid black}
+
+div#box1{background: yellow}
+div#box2{background: lime}
+div#box3{background: url("patch.png"); background-size: 100%}
+
+div#box1:active{
+	-ms-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+
+}
+
+div#box2:active{
+	-ms-transform: scale(0.5);
+	-moz-transform: scale(0.5);
+	-webkit-transform: scale(0.5);
+	-o-transform: scale(0.5);
+	transform: scale(0.5);
+
+}
+
+div#box3:active{
+	-ms-transform: rotateX(180deg);
+	-moz-transform: rotateX(180deg);
+	-webkit-transform: rotateX(180deg);
+	-o-transform: rotateX(180deg);
+	transform: rotateX(180deg);
+	
+}
+
+

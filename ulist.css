@@ -1,0 +1,7 @@
+@charset "utf-8";
+/* CSS Document */
+
+ul.disc-bullets{list-style-type: disc; float: left;}
+ul.circle-bullets{list-style-type: circle; float: right;}
+ul.square-bullets{list-style-type: square; float: left;}
+ul.image-bullets{list-style-image: url(xd.png); clear: both;}

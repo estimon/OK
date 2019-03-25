@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+	<script type="text/javascript">
+		
+		function changetextcolor(){
+			document.getElementById("p1").style.color="white";
+		}
+		
+		function changebgcolor(){
+			document.getElementById("p1").style.backgroundColor="black";
+		}
+		
+		function changefont(){
+			document.getElementById("p1").style.fontFamily="Helvetica";
+		}
+		
+		function changetext(){
+			document.getElementById("p1").innerHTML="nägemist";
+		}
+		
+		
+		function invisible(){
+			document.getElementById("p1").style.visibility="hidden";
+		}
+		
+		function visible(){
+			document.getElementById("p1").style.visibility="visible";
+		}
+		
+		function revert(){
+			document.getElementById("p1").style.backgroundColor="white";
+			document.getElementById("p1").style.color="black";
+			document.getElementById("p1").style.fontFamily="Times New Roman";
+			document.getElementById("p1").innerHTML="tere";
+		}
+	</script>
+
+<body>
+	<p id="p1">tere</p>
+	<input type="button" onClick="changetextcolor()" value="text color">
+	<input type="button" onClick="changebgcolor()" value="background color">
+	<input type="button" onClick="changefont()" value="change font">
+	<input type="button" onClick="changetext()" value="change text">
+	<input type="button" onClick="invisible()" value="hide">
+	<input type="button" onClick="visible()" value="visible">
+	<input type="button" onClick="revert()" value="revert">
+	
+	
+	
+</body>
+</html>

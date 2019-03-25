@@ -1,0 +1,4 @@
+p {background: yellow; width: 20em}
+p.pad {padding: 1em}
+p.padbdr {border: 0.5em red solid}
+p.mgn {margin: 2em}

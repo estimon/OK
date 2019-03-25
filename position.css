@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{padding:0; margin:0; border:0;}
+body{background:#A9A9A9;}
+h1{border:1px solid fuchsia;}
+
+div#wrapper{margin: auto; background: white; width: 800px; height: 1000px;}
+.sized {width: 40%; border: 1px solid lime;}
+.centre {margin: auto;}
+.centred-text {text-align: center; border: 1px solid aqua;}
+p{font-size: 16pt;}

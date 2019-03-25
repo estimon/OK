@@ -1,0 +1,5 @@
+@charset "utf-8";
+/* CSS Document */
+
+footer {display: block; border:1px solid fuchsia}
+footer#page{margin-top: 20px;}

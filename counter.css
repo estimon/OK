@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* CSS Document */
+h2{counter-increment: num 1}
+h3{counter-increment: sub 1; text-indent: 10%}
+
+h2:before {content: counter(num)"";background: aqua}
+h3:before {content: counter(num)"";background: lime}
+
+h3.restart{counter-reset: sub 0}
