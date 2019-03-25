@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+
+</head>
+
+<body>
+    <h1>Performing simple math</h1>
+    <p>
+        value1:
+        <input type="text" id="value1" value="">
+    </p>
+    <p>
+            value2:
+            <input type="text" id="value2" value="">
+    </p>
+
+    <p>
+        Result:
+        <input type="text" id="Result" value="" >
+    </p>
+    <input type="button" value="+" onclick="DoAdd()">
+    <input type="button" value="-" onclick="DoSub()">
+    <input type="button" value="*" onclick="DoMul()">
+    <input type="button" value="/" onclick="DoDiv()">
+    <input type="button" value="Kontrolli" onclick="check()">
+    <script>
+window.onload = randomnum();
+var answer;
+var a;
+var b;  
+            function randomnum(){
+                a = Math.round(Math.random()*10);
+                b = Math.round(Math.random()*10);
+                document.getElementById("value1").value = a;
+                document.getElementById("value2").value = b;
+        
+        
+        
+               /*  var value1 = new Number(document.getElementById("a"));
+                var value2 = new Number(document.getElementById("b")); */
+            }
+            
+            function DoAdd(){
+               answer = a*b
+            }
+            function DoSub(){
+                answer = a-b
+            }
+        
+            function DoMul(){
+                answer = a*b
+            }
+        
+            function DoDiv(){
+               answer = a/b
+            }
+        
+            function check(){
+                var x = document.getElementById("Result").value;
+                if(x == answer){
+                    alert("Õige")
+                }else{
+                    alert("Vale")
+                }
+                
+        
+            }
+        
+        </script>
+</body>
+</html>
