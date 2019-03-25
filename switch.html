@@ -4,16 +4,16 @@
 <meta charset="utf-8">
 <title>Untitled Document</title>
 	<script language="javascript">
-		function CheckChoiche(){
+		function CheckChoich(option){
 			switch(option){
 				case 1:
-					document.GetElementById("Result").innerHTML = "You chose item A";
+					document.getElementById("Result").innerHTML = "You chose item A";
 					break;
 				case 2:
-					document.GetElementById("Result").innerHTML = "You chose item B";
+					document.getElementById("Result").innerHTML = "You chose item B";
 					break;
 				case 3:
-					document.GetElementById("Result").innerHTML = "You chose item C";
+					document.getElementById("Result").innerHTML = "You chose item C";
 					break;
 				default:
 					alert("The value supplied is out of range");
@@ -25,15 +25,24 @@
 			var Selection = prompt("Type a menu option");
 			var IntSelect = parseInt(Selection);
 			
-		    if(isNan(IntSelect)){
+		    if(isNaN(IntSelect)){
 				alert("Please provide numeric input");
 				return;
 			}
-			CheckChoice(IntSelect);
+			CheckChoich(IntSelect);
 		}
 	</script>
 </head>
 
 <body>
-</body>
+	<h1>Using the default clause</h1>
+	<p>Menu Options:</p>
+	<ol>
+		<li>item A</li>
+		<li>item B</li>
+		<li>item C</li>
+	</ol>
+	<input type="button" value="Choose a menu item" onClick="MakeAChoice()">
+	<p id="Result"></p>
+	</body>
 </html>
