@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<script language="javascript">
+		function CheckChoiche(){
+			switch(option){
+				case 1:
+					document.GetElementById("Result").innerHTML = "You chose item A";
+					break;
+				case 2:
+					document.GetElementById("Result").innerHTML = "You chose item B";
+					break;
+				case 3:
+					document.GetElementById("Result").innerHTML = "You chose item C";
+					break;
+				default:
+					alert("The value supplied is out of range");
+					break;
+
+			}
+		}
+		function MakeAChoice(){
+			var Selection = prompt("Type a menu option");
+			var IntSelect = parseInt(Selection);
+			
+		    if(isNan(IntSelect)){
+				alert("Please provide numeric input");
+				return;
+			}
+			CheckChoice(IntSelect);
+		}
+	</script>
+</head>
+
+<body>
+</body>
+</html>
