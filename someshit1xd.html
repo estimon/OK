@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-latest.js">
+		
+	</script>
+	<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js">
+		
+	</script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+<meta charset="utf-8">
+<title>Xd bong</title>
+</head>
+	
+	<style>
+		#Configuration{
+			width: 70%;
+			text-align: center;
+		}
+		#Configuration div{
+			text-align: left;
+		}
+	</style>
+	<script language="javascript">
+		$(function(){
+			$("#Configuration").tabs();
+		});
+	</script>
+
+<body>
+	<h1>Using the tabs widget</h1>
+	<form id="ConfigForm" method="get" action="someshit1xd.html">
+		<div id="Configuration">
+			<ul>
+				<li><a href="#Tab1">Foreground Color</a></li>
+				<li><a href="#Tab2">Background Color</a></li>
+				<li><a href="#Tab3">Options</a></li>
+			</ul>
+			<div id="Tab1">
+				<input id="FGRed" type="radio" name="Foreground" value="Red" checked="checked"/>
+				<label for="FGRed">Red</label><br />
+				<input id="FGBlue" type="radio" name="Foreground" value="Blue" checked="checked"/>
+				<label for="FGBlue">Blue</label><br />
+				
+			</div>
+			<div id="Tab2">
+				<input id="BGRed" type="radio" name="Background" value="Red" checked="checked"/>
+				<label for="BGRed">Red</label><br />
+				<input id="BGBlue" type="radio" name="Background" value="Blue" checked="checked"/>
+				<label for="BGBlue">Blue</label><br />
+				
+			</div>
+			<div id="Tab3">
+				<input id="Sounds" type="checkbox" name="Sounds" value="SpecialSounds" />
+				<label for="Sounds">Use Special Sounds</label><br />
+				
+			</div>
+			
+		</div>
+		<input id="ChangeConfig" type="submit" value="ChangeConfig">
+	</form>
+</body>
+</html>
