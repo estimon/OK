@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+	<script src="http://code.jquery.com/jquery-latest.js">
+		
+	</script>
+	<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js">
+		
+	</script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+	<style>
+		.Transition{
+			margin: 5px;
+			font-family: sans-serif;
+		}
+		
+		.Normal{
+			background-color: #7FFFFF;
+			color: black;
+			border: groove;
+			border-width: 5px;
+			padding: 3px;
+			height: 50px;
+			width: 400px;	
+		}
+	</style>
+	<script language="javascript">
+		$(function(){
+			 var Hidden = false;
+			$("#Effect").click(
+			function(){
+				$("#SampleText").effect("bounce", "easeOutBounce", 1500)
+			});
+			
+			$("#Show").click(
+			function(){
+				var Hidden = false;
+				$("#SampleText").show("slide", 1500, ChangeButtonState);
+			});
+			
+			$("Hide").click(
+			function(){
+				var Hidden = true;
+				$("#SampleText").hide("explode", 1500, ChangeButtonState);
+			});
+			
+			$("#Toggle").click(
+			function(){
+				var Hidden = !Hidden;
+				$("#SampleText").toggle("sacle", {precent: 0}, 1500, ChangeButtonState);
+			});
+			
+			function ChangeButtonState(){
+				if(Hidden){
+					$("#Show").attr("Hidden", false);
+					$("#Hide").attr("Hidden", true);
+				}
+				else{
+					$("#Show").attr("Hidden", true);
+					$("#Hide").attr("Hidden", false);
+				}
+			}
+			
+		})
+	</script>
+
+<body>
+	<h1>Working with Element Visibility</h1>
+	<div class="Transition">
+		<div id="SampleText" class="Normal">
+			This is some text to transition
+		</div>
+	</div>
+	
+	<input type="button" id="Effect" value="Use an Effect"/>
+	<input type="button" id="Show" value="Show Hidden element"/>
+	<input type="button" id="Hide" value="Hide a Visible Element"/>
+	<input type="button" id="Toggle" value="Toggle Element Visibility">
+	
+</body>
+</html>

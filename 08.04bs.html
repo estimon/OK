@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	
+</head>
+<script language="javascript">
+	function LoadImage(){
+		var Image = document.getElementById("Image");
+		Image.alt = "This is a test image"
+		Image.src = "images/TestImage.png";
+		
+		var caption = document.getElementById("Caption");
+		caption.innerHTML = "A test image"
+	}
+	
+	function Clicked(){
+		alert("You clicked the image");
+	}
+</script>
+<body>
+	<h1>Lmao</h1>
+	<figure onClick="Clicked()">
+		<img id="Image"
+			 src=""
+			 alt=""
+			 height="200px"
+			 width="200px">
+			 <figcaption id="Caption"/>
+	</figure>
+	<input id="btnLoad" type="button" value="Load image" onclick="LoadImage()"/>
+</body>
+</html>
