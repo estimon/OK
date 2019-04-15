@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+   <title>Untitled Document</title>
+    <script src="http://code.jquery.com/jquery-latest.js">
+        
+    </script>
+    <script  src="http://code.jquery.com/ui/1.9.2/jquery-ui.js">
+           
+    </script>
+    <link rel="stylesheet"  href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+
+    <style>
+        #First{
+            border: solid;
+            width: 200px;
+            height: 5em;
+            text-align: center;
+            line-height: 5em;
+        }
+		 #Second{
+            border: solid;
+            width: 200px;
+            height: 5em;
+            text-align: center;
+            line-height: 5em;
+        }
+        #Fillme{
+            border: solid;
+            width: 400px;
+            height: 10em;
+            text-align: center;
+            line-height: 10em;
+            position: absolute;
+            top: 250px;
+            left: 250px;
+        }
+		
+        .Filled{
+            background-color: lightblue;
+        }
+		.Filled2{
+			background-color: yellow;
+		}
+    </style>
+    <script>
+        $(function(){
+            $("#First").draggable();
+            $("#Second").draggable();
+            $("#Fillme").droppable({
+                drop: function(event, ui){
+                    $(this)
+                    .addClass("Filled")
+                    .html("Dropped " + ui.draggable.prop("id"));	
+                }
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <h1>DragElement</h1>
+    <p id="First">First</p>
+	<p id="Second">Second</p>
+    <p id="Fillme">Container</p>
+</body>
+</html>

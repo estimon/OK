@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-latest.js">
+		
+	</script>
+	<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js">
+		
+	</script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<style>
+		h1{
+			text-align: center;
+		}
+		#Categories{
+			width: 220px;
+		}
+		.OptionalField{
+			font-family: serif;
+			font-size: medium;
+			color: blue;
+		}
+		
+		.Selections .ui-selected{
+			background: blue;
+			color: white;
+		}
+		.Selections{
+			margin: 0;
+			padding: 0;
+			width: 150px;
+			list-style-type: none;
+		}
+		
+		#DrawingContainer{
+			width: 800px;
+			height: 600px;
+			border: solid;
+			position: absolute;
+			left: 250px;
+			top: 80px;
+		}
+		
+		#Drawing{
+			width: 700px;
+			height: 500px;
+			margin: 0px;
+		}
+	</style>
+	<script language="javascript">
+		$(function(){
+			$("#Categories").accordion();
+			$(".Selections").selectable({
+				
+				selected: function(event, ui){
+					switch(ui.selected.id){
+						case "BackPicFrontPic":
+							$("#Drawing").attr("src","backpicturefrontpicture.html");
+						break;
+						case "DragElement":
+							$("#Drawing").attr("src","dragelement.html");
+						break;
+							
+					}
+				}
+			})
+		});
+		$(function(){
+			$("BackPicFrontPic").tooltip({
+				position:{
+					using: function(position, feedback){
+						$(this).addClass("OptionalField");
+					}
+				}
+			});
+			$("DragElement").tooltip({
+				position:{
+					using: function(position, feedback){
+						$(this).addClass("OptionalField");
+					}
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<h1>accordion</h1>
+	<div id="Categories">
+		<h2>JS work select</h2>
+		<div>
+		<ol id="JS work select" class="Selections">
+			<li id="BackPicFrontPic" title="See on Background ja Foreground pildi vahetaja">BackPicFrontPic</li>
+			<li id="DragElement" title="See on tõmmatava elemendi töö">DragElement</li>
+		</ol>
+	    </div>
+		<div id="DrawingContainer">
+			<iframe id="Drawing"></iframe>
+		</div>
+	</div>
+</body>
+</html>
